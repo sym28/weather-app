@@ -5,9 +5,10 @@ body{
 
 #app{
     display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
+    width: 100%;
+    grid-auto-rows: minmax(80px, auto);
+    grid-template-columns: repeat(3, 1fr);
+    height:100%;
     background: #f23557;
     color: #f0d43a;
     justify-content: center;
@@ -20,7 +21,36 @@ body{
 
 }
 
+.headline {
+    height: 50px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.zip {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+}
+
+.feel {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+
+}
+
+
 .entry{
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    grid-row-end: 4;
     background: rgba(59, 74, 107, .4);
 }
 
@@ -40,9 +70,6 @@ body{
 
 }
 
-.headline {
-
-}
 .title{
 
 }
@@ -65,14 +92,15 @@ input{
 }
 
 button{
-    width: 400px;
-    height: 100px;
+    width: 150px;
+    height: 50px;
     background: #3b4a6b;
     color: #f0d43a;
     font-size: 26px;
     font-family: 'Oswald', sans-serif;
     border: none;
     box-shadow: 2px 4px 5px #444;
+    cursor: pointer;
 }
 h1{
     font-size: 36px;
